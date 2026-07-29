@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio personal de Jaime Betancur Espinosa" />
+  <title>Jaime Betancur Espinosa | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header" id="inicio">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">Jaime<span>Betancur</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero container">
+      <p class="eyebrow">Ingeniero de Software</p>
+      <h1>Jaime Betancur Espinosa</h1>
+      <p class="subtitle">Engineer en Tata Consultancy Services · Sabaneta, Antioquia, Colombia</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="cv.pdf" download>Descargar CV</a>
+        <a class="btn btn-secondary" href="#contacto">Contactarme</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="sobre-mi" class="section container reveal">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy una persona con experiencia en el desarrollo de soluciones de software, con enfoque en buenas prácticas,
+        estándares de programación, análisis y diseño. Me siento cómodo construyendo y entendiendo sistemas,
+        y disfruto convertir necesidades complejas en soluciones claras y funcionales.
+      </p>
+      <p>
+        Tengo habilidades para elaborar documentación técnica, administrar bases de datos y gestionar sistemas de información.
+        También cuento con experiencia coordinando la atención y soporte al usuario final, asegurando que cada requerimiento
+        se resuelva de forma eficiente y oportuna.
+      </p>
+      <div class="chips">
+        <span>Oracle AI</span>
+        <span>Inteligencia Artificial</span>
+        <span>Bases de Datos</span>
+        <span>Desarrollo Full Stack</span>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section section-alt reveal">
+      <div class="container">
+        <h2>Experiencia</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <h3>Tata Consultancy Services</h3>
+            <p class="role">Engineer · Nov 2024 – Presente · Medellín, Antioquia</p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>CFA Cooperativa Financiera</h3>
+            <p class="role">Analista de desarrollo de software · Ago 2017 – Nov 2024 · Medellín</p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>FGI Garantías Inmobiliarias</h3>
+            <p class="role">Ingeniero de Desarrollo · Jul 2014 – Ago 2017 · Medellín</p>
+            <p>
+              Levantamiento de requerimientos, diseño y desarrollo front-end/back-end del software “Afianza”
+              para soportar operación de crédito, facturación, cartera, módulo comercial y procesos administrativos.
+              Stack: Symfony PHP, jQuery, AngularJS, PrototypeJS, Bootstrap, MariaDB.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Sealco S.A.</h3>
+            <p class="role">Analista de Sistemas · Jul 2013 – Jul 2014 · Itagüí</p>
+            <p>
+              Desarrollo de sistemas internos de órdenes de compra, mantenimiento e intranet corporativa con CakePHP,
+              además de actualización de plataformas existentes.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <h3>Soporte y Cia. S.A.S.</h3>
+            <p class="role">Ingeniero de Desarrollo e Infraestructura · Sep 2009 – Jun 2012</p>
+            <p>
+              Desarrollo e implementación de módulos, migraciones de plataforma, planes de prueba, documentación técnica,
+              administración de bases de datos SQL Server/MySQL/PostgreSQL y servicios de infraestructura.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section container reveal">
+      <h2>Proyectos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Afianza</h3>
+          <p>
+            Plataforma integral para operación de garantías inmobiliarias: estudios de crédito,
+            facturación, cartera, módulo comercial y procesos administrativos.
+          </p>
+          <p class="stack">Symfony · AngularJS · jQuery · MariaDB</p>
+        </article>
+
+        <article class="card">
+          <h3>Sistema de Gestión de Órdenes de Compra</h3>
+          <p>Aplicativo para control y trazabilidad del flujo de órdenes de compra en Sealco.</p>
+          <p class="stack">CakePHP</p>
+        </article>
+
+        <article class="card">
+          <h3>Sistema de Gestión de Mantenimiento</h3>
+          <p>Solución para gestión de mantenimiento y seguimiento operativo interno.</p>
+          <p class="stack">CakePHP</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="section section-alt reveal">
+      <div class="container contact">
+        <h2>Contacto</h2>
+        <p>¿Tienes una oportunidad o proyecto? Hablemos.</p>
+        <div class="contact-links">
+          <a href="mailto:contactarjaimebe@gmail.com">contactarjaimebe@gmail.com</a>
+          <a href="https://www.linkedin.com/in/jaime-betancur-espinosa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <a class="btn btn-primary" href="cv.pdf" download>Descargar CV</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Jaime Betancur Espinosa. Hecho con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
