@@ -22,3 +22,5 @@ Sitio estático preparado para **GitHub Pages** con HTML, CSS y JavaScript.
 - Cambia colores en `:root` dentro de `styles.css`.
 - Edita secciones de experiencia/proyectos en `index.html`.
 - Reemplaza `cv.pdf` por tu CV real manteniendo el mismo nombre.
+
+> Trigger deploy: 2026-07-29
