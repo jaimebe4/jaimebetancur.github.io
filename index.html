@@ -3,255 +3,282 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio personal de Jaime Betancur Espinosa" />
-  <title>Jaime Betancur Espinosa | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Jaime Betancur Espinosa | Software Engineer</title>
+  <meta
+    name="description"
+    content="Portafolio profesional de Jaime Betancur Espinosa, Software Engineer con experiencia en soluciones enterprise, desarrollo full stack y herramientas de IA generativa."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header" id="inicio">
-    <nav class="nav container">
-      <a href="#inicio" class="logo">Jaime<span>Betancur</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#experiencia">Experiencia</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <section class="hero container">
-      <p class="eyebrow">Ingeniero de Software</p>
-      <h1>Jaime Betancur Espinosa</h1>
-      <p class="subtitle">Engineer en Tata Consultancy Services · Sabaneta, Antioquia, Colombia</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="./cv.pdf" download>Descargar CV</a>
-        <a class="btn btn-secondary" href="#contacto">Contactarme</a>
-      </div>
-    </section>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio">Jaime Betancur</a>
+      <nav class="nav">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#skills">Skills</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-photo-wrap">
+        <img
+          class="hero-photo"
+          src="https://drive.google.com/thumbnail?id=15vylxXQhOICjr4VRxihQmc7BbpJC9cQp&sz=w1000"
+          alt="Foto de Jaime Betancur Espinosa"
+          referrerpolicy="no-referrer"
+        />
+      </div>
+
+      <p class="eyebrow">Software Engineer</p>
+      <h1>Jaime Betancur Espinosa</h1>
+      <p class="lead">
+        Desarrollo soluciones enterprise escalables, con foco en experiencia de usuario,
+        eficiencia operativa e integración de herramientas de IA generativa.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contacto">Contactar</a>
+        <a class="btn btn-ghost" href="#experiencia">Ver experiencia</a>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
     <section id="sobre-mi" class="section container reveal">
       <h2>Sobre mí</h2>
-      <p>
-        Ingeniero de software con experiencia en el diseño, desarrollo y modernización de soluciones tecnológicas
-        orientadas al negocio. Me especializo en construir aplicaciones robustas, mantenibles y escalables,
-        aplicando buenas prácticas de ingeniería, estándares de desarrollo y principios de arquitectura de software.
-      </p>
-      <p>
-        Cuento con experiencia en documentación técnica, administración de bases de datos relacionales y no
-        relacionales, e integración de componentes en entornos corporativos. Además, he liderado procesos de
-        soporte y atención a usuarios, enfocándome en la resolución eficiente de requerimientos, la mejora
-        continua y la entrega de valor.
-      </p>
-     
-<p>
-  Actualmente trabajo en Tata Consultancy Services como Software Engineer, desarrollando soluciones enterprise con enfoque en herramientas de IA generativa, mejorando la experiencia de usuario.
-</p>
- <div class="chips">
-        <span>Oracle AI</span>
-        <span>Inteligencia Artificial</span>
-        <span>Bases de Datos</span>
-        <span>Desarrollo Full Stack</span>
+      <div class="card">
+        <p>
+          Soy Ingeniero de Software con experiencia en desarrollo Full Stack y diseño de soluciones
+          empresariales orientadas a resultados.
+        </p>
+        <p>
+          Actualmente trabajo en Tata Consultancy Services como Software Engineer, desarrollando
+          soluciones enterprise con enfoque en herramientas de IA generativa, mejorando la experiencia de usuario.
+        </p>
       </div>
     </section>
 
-    <section id="experiencia" class="section section-alt reveal">
-      <div class="container">
-        <h2>Experiencia</h2>
-        <div class="timeline">
-          <article class="timeline-item">
+    <!-- EXPERIENCIA -->
+    <section id="experiencia" class="section container reveal">
+      <h2>Experiencia</h2>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="timeline-year">Actualidad</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-card">
             <h3>Tata Consultancy Services</h3>
-            <p class="role">Engineer · Nov 2024 – Presente · Medellín, Antioquia</p>
+            <p class="role">Software Engineer</p>
             <p>
-              He venido participando en iniciativas de modernización tecnológica para Banco Banistmo,
-              enfocadas en la transformación de aplicaciones legacy desarrolladas en VB6 hacia
-              arquitecturas modernas basadas en Angular, Java y Spring Boot. Mi rol ha incluido análisis
-              funcional y técnico, diseño de componentes, desarrollo e integración de servicios, y
-              acompañamiento en pruebas para asegurar continuidad operativa, mantenibilidad y escalabilidad
-              de las soluciones.
+              Desarrollo de soluciones enterprise con herramientas de IA generativa para optimizar procesos
+              y elevar la experiencia de usuario.
             </p>
-          </article>
+          </div>
+        </article>
 
-          <article class="timeline-item">
-            <h3>CFA Cooperativa Financiera</h3>
-            <p class="role">Analista de desarrollo de software · Ago 2017 – Nov 2024 · Medellín</p>
+        <article class="timeline-item">
+          <span class="timeline-year">2014 — 2017</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-card">
+            <h3>FGI Garantías Inmobiliarias</h3>
+            <p class="role">Ingeniero de Desarrollo · Medellín</p>
             <p>
-              Responsable del mantenimiento evolutivo y soporte del core bancario Cobis, con enfoque en el
-              desarrollo y optimización de stored procedures, la implementación de nuevas funcionalidades y
-              la mejora continua de procesos operativos, contribuyendo a la estabilidad, eficiencia y
-              continuidad de la operación.
+              Participé en requerimientos, diseño, desarrollo e implementación de Afianza para soportar la
+              operación integral del negocio.
             </p>
-          </article>
-
-         
-            <article class="timeline-item">
-  <h3>FGI Garantías Inmobiliarias</h3>
-  <p class="role">Ingeniero de Desarrollo · Jul 2014 – Ago 2017 · Medellín</p>
-  <p>
-    Participé en el levantamiento y análisis de requerimientos, así como en el diseño, desarrollo e implementación de soluciones de software para Afianza, plataforma encargada de soportar la operación integral de la compañía.
-  </p>
-  <p>
-    Fui responsable del desarrollo Front-end y Back-end de módulos estratégicos, incluyendo estudios de crédito para arrendamiento de inmuebles, facturación, gestión de cartera, módulo comercial y procesos administrativos, contribuyendo a la optimización y automatización de los procesos del negocio.
-  </p>
-  <p>
-    El desarrollo de la solución se realizó utilizando Symfony (PHP) como framework principal, junto con tecnologías como AngularJS, jQuery, PrototypeJS, Bootstrap y MariaDB como sistema de gestión de bases de datos.
-  </p>
-</article>
-
-          <article class="timeline-item">
-            <h3>Sealco S.A.</h3>
-            <p class="role">Analista de Sistemas · Jul 2013 – Jul 2014 · Itagüí</p>
             <p>
-              Desarrollo de sistemas internos de órdenes de compra, mantenimiento e intranet corporativa con CakePHP,
-              además de actualización de plataformas existentes.
+              Lideré desarrollo Front-end y Back-end de módulos estratégicos: estudios de crédito, facturación,
+              cartera, comercial y procesos administrativos.
             </p>
-          </article>
+            <p class="stack">
+              <strong>Stack:</strong> Symfony (PHP), AngularJS, jQuery, PrototypeJS, Bootstrap, MariaDB.
+            </p>
+          </div>
+        </article>
 
-          <article class="timeline-item">
-  <h3>Soporte y Cia. S.A.S.</h3>
-  <p class="role">Ingeniero de Desarrollo e Infraestructura · Sep 2009 – Jun 2012</p>
-  <p><strong>Funciones:</strong></p>
-  <ul>
-    <li>Planeación, desarrollo, implementación, actualización y despliegue de nuevos módulos del software Infom@nte, incluyendo los módulos de Llantas y Confiabilidad, así como capacitación a usuarios finales.</li>
-    <li>Participación en la migración del software Infom@nte de la versión 3 a la versión 4, abarcando 18 módulos y más de 1.500 funcionalidades.</li>
-    <li>Definición, diseño e implementación de planes de prueba para garantizar la calidad y estabilidad de nuevos desarrollos.</li>
-    <li>Elaboración de documentación técnica y funcional, incluyendo manuales de usuario, instructivos y tutoriales utilizando Windows Help.</li>
-    <li>Administración y mantenimiento de bases de datos Microsoft SQL Server, MySQL y PostgreSQL para aplicaciones desarrolladas internamente y soluciones corporativas, como software contable, sistemas de gestión, aplicaciones internas y portales web.</li>
-    <li>Instalación, configuración y administración de motores de bases de datos SQL Server 2000, 2005 y 2008.</li>
-    <li>Diseño, administración y mantenimiento del portal web corporativo rcm2-soporte.com.</li>
-    <li>Instalación, configuración y administración del servidor proxy Microsoft ISA Server 2004.</li>
-    <li>Administración de la infraestructura tecnológica y de los principales servicios de servidores, incluyendo Active Directory, Controlador de Dominio, DHCP, IIS, FTP, PHP, SQL Server, MySQL, copias de seguridad e ISA Server.</li>
-    <li>Administración del ciclo de vida del software corporativo, incluyendo inventario, adquisición, licenciamiento, instalación y actualización.</li>
-    <li>Elaboración de informes gerenciales para la toma de decisiones, relacionados con infraestructura tecnológica, inventario de equipos, licenciamiento de software, impresoras y monitoreo de la red.</li>
-    <li>Configuración y puesta en marcha de equipos para nuevos colaboradores, así como capacitación en herramientas y procedimientos tecnológicos.</li>
-    <li>Administración de la red LAN y de la infraestructura Wi-Fi, incluyendo la definición e implementación de políticas de acceso y seguridad.</li>
-    <li>Administración del servicio de hosting mediante cPanel, gestionando cuentas de correo, FTP, listas blancas y negras, redireccionamientos y demás servicios asociados al dominio corporativo.</li>
-    <li>Gestión de compras y relación con proveedores de servicios tecnológicos, incluyendo conectividad, hardware y licenciamiento de software.</li>
-    <li>Diseño, elaboración y distribución de boletines informativos utilizando Adobe Creative Suite CS4 y herramientas de envío masivo de correo electrónico.</li>
-  </ul>
-</article>
-        </div>
+        <article class="timeline-item">
+          <span class="timeline-year">2009 — 2012</span>
+          <span class="timeline-dot"></span>
+          <div class="timeline-card">
+            <h3>Soporte y Cia. S.A.S.</h3>
+            <p class="role">Ingeniero de Desarrollo e Infraestructura</p>
+
+            <details class="exp-details">
+              <summary>Ver responsabilidades clave</summary>
+              <ul>
+                <li>Desarrollo, despliegue y capacitación de módulos de Infom@nte (incluyendo Llantas y Confiabilidad).</li>
+                <li>Migración de Infom@nte v3 a v4: 18 módulos y +1.500 funcionalidades.</li>
+                <li>Diseño de pruebas, documentación técnica/funcional y soporte a usuarios.</li>
+                <li>Administración de SQL Server, MySQL y PostgreSQL.</li>
+                <li>Gestión de infraestructura: AD, DHCP, IIS, FTP, PHP, backups e ISA Server.</li>
+                <li>Gestión de hosting cPanel, red LAN/Wi-Fi y proveedores tecnológicos.</li>
+              </ul>
+            </details>
+          </div>
+        </article>
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="section container reveal">
       <h2>Skills</h2>
-      <div class="skills-grid">
-        <article class="skill-block">
+
+      <div class="skills-columns">
+        <div class="skills-group card">
+          <h3>Backend</h3>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-php-plain colored"></i> PHP / Symfony</span>
+              <strong>90%</strong>
+            </div>
+            <div class="bar"><span style="width:90%"></span></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+              <strong>82%</strong>
+            </div>
+            <div class="bar"><span style="width:82%"></span></div>
+          </div>
+        </div>
+
+        <div class="skills-group card">
+          <h3>Frontend</h3>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-angularjs-plain colored"></i> AngularJS</span>
+              <strong>80%</strong>
+            </div>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-jquery-plain colored"></i> jQuery / PrototypeJS</span>
+              <strong>85%</strong>
+            </div>
+            <div class="bar"><span style="width:85%"></span></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap / CSS</span>
+              <strong>88%</strong>
+            </div>
+            <div class="bar"><span style="width:88%"></span></div>
+          </div>
+        </div>
+
+        <div class="skills-group card">
           <h3>Bases de datos</h3>
-          <div class="chips">
-            <span>SQL</span>
-            <span>Stored Procedures</span>
-            <span>Bases de datos relacionales</span>
-            <span>Bases de datos no relacionales</span>
-            <span>MongoDB</span>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-mariadb-original colored"></i> MariaDB / MySQL</span>
+              <strong>86%</strong>
+            </div>
+            <div class="bar"><span style="width:86%"></span></div>
           </div>
-        </article>
-
-        <article class="skill-block">
-          <h3>DevOps y entrega continua</h3>
-          <div class="chips">
-            <span>Azure DevOps</span>
-            <span>CI/CD</span>
-            <span>Automatización de despliegues</span>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+              <strong>78%</strong>
+            </div>
+            <div class="bar"><span style="width:78%"></span></div>
           </div>
-        </article>
-
-        <article class="skill-block">
-          <h3>Desarrollo y arquitectura</h3>
-          <div class="chips">
-            <span>Análisis y diseño de software</span>
-            <span>Buenas prácticas de programación</span>
-            <span>Documentación técnica</span>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-microsoftsqlserver-plain colored"></i> SQL Server</span>
+              <strong>84%</strong>
+            </div>
+            <div class="bar"><span style="width:84%"></span></div>
           </div>
-        </article>
+        </div>
 
-        <article class="skill-block">
-          <h3>IA y datos</h3>
-          <div class="chips">
-            <span>IA Generativa</span>
-            <span>Oracle AI Foundations</span>
+        <div class="skills-group card">
+          <h3>Infraestructura</h3>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-linux-plain colored"></i> Linux / Servidores</span>
+              <strong>75%</strong>
+            </div>
+            <div class="bar"><span style="width:75%"></span></div>
           </div>
-        </article>
-
-        <article class="skill-block">
-          <h3>Core bancario</h3>
-          <div class="chips">
-            <span>Cobis</span>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-git-plain colored"></i> Git</span>
+              <strong>80%</strong>
+            </div>
+            <div class="bar"><span style="width:80%"></span></div>
           </div>
-        </article>
-
-<article class="skill-block">
-          <h3>Lenguajes</h3>
-          <div class="chips">
-            <span>Java</span>
-<span>Angular</span>
-<span>.Net</span>
-<span>C#</span>
-<span>PHP</span>
-<span>HTML</span>
-<span>Javascript</span>
-<span>Typescript</span>
-<span>CSS</span>
+          <div class="skill-row">
+            <div class="skill-meta">
+              <span><i class="devicon-azure-plain colored"></i> Azure</span>
+              <strong>70%</strong>
+            </div>
+            <div class="bar"><span style="width:70%"></span></div>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="proyectos" class="section section-alt reveal">
-      <div class="container">
-        <h2>Proyectos</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Afianza</h3>
-            <p>
-              Plataforma integral para operación de garantías inmobiliarias: estudios de crédito,
-              facturación, cartera, módulo comercial y procesos administrativos.
-            </p>
-            <p class="stack">Symfony · AngularJS · jQuery · MariaDB</p>
-          </article>
-
-          <article class="card">
-            <h3>Sistema de Gestión de Órdenes de Compra</h3>
-            <p>Aplicativo para control y trazabilidad del flujo de órdenes de compra en Sealco.</p>
-            <p class="stack">CakePHP</p>
-          </article>
-
-          <article class="card">
-            <h3>Sistema de Gestión de Mantenimiento</h3>
-            <p>Solución para gestión de mantenimiento y seguimiento operativo interno.</p>
-            <p class="stack">CakePHP</p>
-          </article>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="section reveal">
-      <div class="container contact">
-        <h2>Contacto</h2>
-        <p>¿Tienes una oportunidad o proyecto? Hablemos.</p>
-        <div class="contact-links">
-          <a href="mailto:contactarjaimebe@gmail.com">contactarjaimebe@gmail.com</a>
-          <a href="https://www.linkedin.com/in/jaime-betancur-espinosa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://wa.me/573012414821" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <!-- CTA -->
+    <section class="section container reveal">
+      <div class="cta card">
+        <h2>¿Trabajamos juntos?</h2>
+        <p>
+          Estoy disponible para proyectos y oportunidades donde pueda aportar en
+          arquitectura, desarrollo y modernización de plataformas.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:jaime@example.com">Escribirme por Email</a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-        <a class="btn btn-primary" href="./cv.pdf" download>Descargar CV</a>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section container reveal">
+      <h2>Contacto</h2>
+      <div class="card">
+        <p><strong>Email:</strong> <a href="mailto:jaime@example.com">jaime@example.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Tu perfil</a></p>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Jaime Betancur Espinosa. Hecho con HTML, CSS y JavaScript.</p>
+      <p>© <span id="year"></span> Jaime Betancur Espinosa.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
