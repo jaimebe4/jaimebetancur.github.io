@@ -390,3 +390,114 @@ h1 {
 .exp-toggle:hover {
   border-color: var(--primary-2);
 }
+
+/* ===== Ajustes visuales solicitados ===== */
+
+/* 1) Más espacio entre el año y la línea de tiempo */
+.timeline.timeline-spaced-years {
+  padding-left: 9.2rem; /* antes más compacto */
+}
+
+.timeline.timeline-spaced-years::before {
+  left: 7.3rem; /* mueve la línea un poco a la derecha */
+}
+
+.timeline.timeline-spaced-years .timeline-year {
+  left: -9.2rem;
+  width: 7rem;          /* más ancho para que no se vea pegado */
+  padding-right: 0.7rem; /* separación visual del texto frente a la línea */
+}
+
+.timeline.timeline-spaced-years .timeline-dot {
+  left: -1.92rem; /* conserva alineación con la línea */
+}
+
+/* 2) Mejor separación icono/texto en skills */
+.skills-icon-gap .skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* separación icono-texto */
+  padding: 0.58rem 0.72rem;
+}
+
+.skills-icon-gap .skill-chip i {
+  font-size: 1.15rem;
+  min-width: 20px; /* evita que el texto “salte” por iconos distintos */
+  text-align: center;
+}
+
+.skills-icon-gap .skill-chip span {
+  line-height: 1.35;
+}
+
+/* 3) Estilo premium para botón Ver más / Ver menos */
+.timeline-item.long-exp .exp-preview {
+  max-height: 240px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.35s ease;
+}
+
+.timeline-item.long-exp .exp-preview::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 64px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(18, 26, 48, 0), rgba(18, 26, 48, 1));
+}
+
+.timeline-item.long-exp.expanded .exp-preview {
+  max-height: 5000px;
+}
+
+.timeline-item.long-exp.expanded .exp-preview::after {
+  display: none;
+}
+
+.timeline-item.long-exp .exp-toggle {
+  margin-top: 0.75rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--primary-2);
+  font-weight: 700;
+  font-size: 0.86rem;
+  border-radius: 8px;
+  padding: 0.42rem 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.timeline-item.long-exp .exp-toggle:hover {
+  border-color: var(--primary-2);
+  background: rgba(79, 140, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Responsive para que no se rompa en móvil */
+@media (max-width: 780px) {
+  .timeline.timeline-spaced-years {
+    padding-left: 1.8rem; /* vuelve al layout móvil */
+  }
+
+  .timeline.timeline-spaced-years::before {
+    left: 0.2rem;
+  }
+
+  .timeline.timeline-spaced-years .timeline-year {
+    position: static;
+    width: auto;
+    left: auto;
+    padding-right: 0;
+    margin-bottom: 0.35rem;
+    color: var(--primary-2);
+    text-align: left;
+  }
+
+  .timeline.timeline-spaced-years .timeline-dot {
+    left: -0.2rem;
+    top: 1.95rem;
+  }
+}
