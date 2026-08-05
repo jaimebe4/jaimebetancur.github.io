@@ -337,5 +337,53 @@
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
   </script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+  // Ver más / Ver menos
+  document.querySelectorAll(".timeline-item.long-exp").forEach((item) => {
+    const card = item.querySelector(".timeline-card");
+    if (!card) return;
+
+    const nodes = Array.from(card.children);
+    const title = card.querySelector("h3");
+    const role = card.querySelector(".role");
+
+    // Contenedor del contenido colapsable
+    const preview = document.createElement("div");
+    preview.className = "exp-preview";
+
+    nodes.forEach((node) => {
+      if (node !== title && node !== role) {
+        preview.appendChild(node);
+      }
+    });
+
+    card.appendChild(preview);
+
+    const btn = document.createElement("button");
+    btn.className = "exp-toggle";
+    btn.type = "button";
+    btn.textContent = "Ver más";
+
+    btn.addEventListener("click", () => {
+      const expanded = item.classList.toggle("expanded");
+      btn.textContent = expanded ? "Ver menos" : "Ver más";
+    });
+
+    card.appendChild(btn);
+  });
+</script>
 </body>
 </html>
