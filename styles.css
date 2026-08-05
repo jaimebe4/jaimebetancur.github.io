@@ -319,3 +319,29 @@ h1 {
   .hero { padding-top: 4rem; }
   .hero-photo { width: 120px; height: 120px; }
 }
+/* Hero: foto + título lado a lado */
+.hero-top {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.hero-heading {
+  min-width: 260px;
+}
+
+.hero-heading .eyebrow {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .hero-top {
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  .hero-heading {
+    min-width: 0;
+  }
+}
