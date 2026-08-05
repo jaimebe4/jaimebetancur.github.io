@@ -345,3 +345,48 @@ h1 {
     min-width: 0;
   }
 }
+/* ===== Ver más / Ver menos para experiencias largas ===== */
+.long-exp .timeline-card {
+  position: relative;
+}
+
+.long-exp .exp-preview {
+  max-height: 220px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.35s ease;
+}
+
+.long-exp .exp-preview::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  background: linear-gradient(to bottom, rgba(18, 26, 48, 0), rgba(18, 26, 48, 1));
+  pointer-events: none;
+}
+
+.long-exp.expanded .exp-preview {
+  max-height: 5000px;
+}
+
+.long-exp.expanded .exp-preview::after {
+  display: none;
+}
+
+.exp-toggle {
+  margin-top: 0.65rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--primary-2);
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+}
+
+.exp-toggle:hover {
+  border-color: var(--primary-2);
+}
