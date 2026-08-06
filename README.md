@@ -23,4 +23,29 @@ Sitio estático preparado para **GitHub Pages** con HTML, CSS y JavaScript.
 - Edita secciones de experiencia/proyectos en `index.html`.
 - Reemplaza `cv.pdf` por tu CV real manteniendo el mismo nombre.
 
+## Generar PDF del perfil con Python
+
+Este repositorio incluye un script que convierte el perfil publicado en GitHub Pages en un PDF estilo hoja de vida y siempre actualiza `cv.pdf`.
+
+URL fuente usada por el script:
+
+- `https://jaimebe4.github.io/jaimebetancur.github.io/`
+
+1. Instala dependencias:
+   - `pip install -r requirements.txt`
+2. Instala Chromium para Playwright (una sola vez):
+   - `python -m playwright install chromium`
+3. Genera el PDF:
+   - `python generar_pdf_perfil.py`
+
+### Opcion rapida en Windows (.bat)
+
+Tambien puedes ejecutar directamente:
+
+- `generar_pdf_perfil.bat`
+
+El .bat usa el script Python y muestra mensajes de error si falta Python o dependencias.
+
+El resultado se guarda en `cv.pdf` en la raiz del proyecto.
+
 > Trigger deploy: 2026-07-29

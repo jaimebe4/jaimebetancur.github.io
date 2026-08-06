@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descargando CV...</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --primary: #1e3a8a;
+      --border: #cbd5e1;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card {
+      width: min(92vw, 540px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      background: #fff;
+    }
+
+    h1 {
+      margin: 0 0 0.55rem;
+      font-size: 1.08rem;
+      color: var(--primary);
+    }
+
+    p {
+      margin: 0.35rem 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Descargando CV...</h1>
+    <p>Si la descarga no inicia automaticamente, usa este enlace:</p>
+    <p><a id="fallbackLink" href="cv.pdf" download="CV-Jaime-Betancur-Espinosa.pdf">Descargar CV en PDF</a></p>
+  </main>
+
+  <script>
+    (async () => {
+      const pdfPath = "cv.pdf";
+      const fileName = "CV-Jaime-Betancur-Espinosa.pdf";
+
+      try {
+        const response = await fetch(pdfPath, { cache: "no-store" });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      } catch (err) {
+        console.error("No fue posible iniciar la descarga automatica:", err);
+      }
+    })();
+  </script>
+</body>
+</html>
