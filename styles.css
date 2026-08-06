@@ -626,3 +626,56 @@ h1 {
     column-gap: 0;
   }
 }
+
+/* ===== Refinamiento visual de Habilidades ===== */
+#habilidades .skills-columns {
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 1.05rem;
+}
+
+#habilidades .skills-group.card {
+  border: 1px solid rgba(121, 164, 255, 0.32);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
+    linear-gradient(145deg, rgba(79, 140, 255, 0.1), rgba(45, 212, 191, 0.03));
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+#habilidades .skills-group h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.02rem;
+}
+
+#habilidades .skills-grid {
+  gap: 0.56rem;
+}
+
+#habilidades .skills-icon-gap .skill-chip {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 0.85rem;
+  min-height: 46px;
+  padding: 0.52rem 0.78rem;
+}
+
+#habilidades .skills-icon-gap .skill-chip i {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+#habilidades .skills-icon-gap .skill-chip span {
+  margin: 0;
+  padding-left: 0.08rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  #habilidades .skills-columns {
+    grid-template-columns: 1fr;
+  }
+}
