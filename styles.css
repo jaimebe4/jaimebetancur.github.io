@@ -207,6 +207,49 @@ h1 {
 .timeline-card p { margin: .4rem 0; }
 .stack { color: #d7e0fb; }
 
+/* Long experience toggle */
+.timeline-item.long-exp .exp-preview {
+  max-height: 9.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: max-height .35s ease;
+}
+
+.timeline-item.long-exp .exp-preview::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3.5rem;
+  background: linear-gradient(to bottom, rgba(23, 33, 61, 0), rgba(23, 33, 61, 1));
+  pointer-events: none;
+}
+
+.timeline-item.long-exp.expanded .exp-preview {
+  max-height: 120rem;
+}
+
+.timeline-item.long-exp.expanded .exp-preview::after {
+  display: none;
+}
+
+.exp-toggle {
+  margin-top: .7rem;
+  min-height: 36px;
+  padding: 0 .9rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  color: var(--primary-2);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.exp-toggle:hover {
+  border-color: var(--primary);
+}
+
 .exp-details {
   margin-top: .45rem;
   border-top: 1px dashed rgba(121,6rem;
@@ -321,14 +364,15 @@ h1 {
 }
 /* Hero: foto + título lado a lado */
 .hero-top {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
   gap: 1.2rem;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .hero-heading {
-  min-width: 260px;
+  min-width: 0;
 }
 
 .hero-heading .eyebrow {
@@ -337,12 +381,9 @@ h1 {
 
 @media (max-width: 700px) {
   .hero-top {
+    grid-template-columns: 1fr;
     align-items: flex-start;
     gap: 0.9rem;
-  }
-
-  .hero-heading {
-    min-width: 0;
   }
 }
 /* ===== Ver más / Ver menos para experiencias largas ===== */
@@ -403,10 +444,11 @@ h1 {
 }
 
 .timeline.timeline-spaced-years .timeline-year {
-  left: -11rem;
-  width: 8.5rem;
+  left: -12rem;
+  width: 9.4rem;
   text-align: right;
-  padding-right: 1.2rem; /* más separación visual del texto frente a la línea */
+  white-space: nowrap;
+  padding-right: 1.8rem; /* separa más el texto de la línea de tiempo */
 }
 
 .timeline.timeline-spaced-years .timeline-dot {
@@ -430,6 +472,62 @@ h1 {
 
 .skills-icon-gap .skill-chip span {
   line-height: 1.4;
+}
+
+/* 2.1) Apariencia mejorada para Skills y Habilidades */
+.skills-group.card {
+  border-color: rgba(79, 140, 255, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015)),
+    linear-gradient(120deg, rgba(79, 140, 255, 0.08), rgba(45, 212, 191, 0.03));
+}
+
+.skills-group.card h3 {
+  margin-bottom: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.62rem;
+}
+
+.skills-icon-gap .skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.78rem;
+  min-height: 44px;
+  border: 1px solid rgba(121, 164, 255, 0.2);
+  background: rgba(11, 16, 32, 0.45);
+  border-radius: 10px;
+  padding: 0.55rem 0.78rem;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.skills-icon-gap .skill-chip:hover {
+  border-color: rgba(121, 164, 255, 0.55);
+  background: rgba(79, 140, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.skills-icon-gap .skill-chip i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.skills-icon-gap .skill-chip span {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.005em;
 }
 
 /* 3) Estilo premium para botón Ver más / Ver menos */
@@ -485,21 +583,24 @@ h1 {
   }
 
   .timeline.timeline-spaced-years::before {
-    left: 0.2rem;
+    left: -0.15rem;
   }
 
   .timeline.timeline-spaced-years .timeline-year {
     position: static;
     width: auto;
     left: auto;
-    padding-right: 0;
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 0.9rem;
+    margin-left: 0.15rem;
     margin-bottom: 0.35rem;
     color: var(--primary-2);
     text-align: left;
   }
 
   .timeline.timeline-spaced-years .timeline-dot {
-    left: -0.2rem;
+    left: -0.56rem;
     top: 1.95rem;
   }
 }

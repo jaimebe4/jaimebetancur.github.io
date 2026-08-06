@@ -18,7 +18,7 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
   />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260806-1" />
 </head>
 <body>
   <header class="site-header">
@@ -370,25 +370,50 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", () => {
+      const yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
+      // Fallback para navegadores sin IntersectionObserver
+      const revealElements = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        revealElements.forEach((el) => observer.observe(el));
+      } else {
+        revealElements.forEach((el) => el.classList.add("visible"));
+      }
+
+      // Ver más / Ver menos
+      document.querySelectorAll(".timeline-item.long-exp").forEach((item, index) => {
+        const btn = item.querySelector(".exp-toggle");
+        const preview = item.querySelector(".exp-preview");
+
+        if (!btn || !preview) {
+          return;
+        }
+
+        if (!preview.id) {
+          preview.id = `exp-preview-${index + 1}`;
+        }
+        btn.setAttribute("aria-controls", preview.id);
+
+        btn.addEventListener("click", () => {
+          const expanded = item.classList.toggle("expanded");
+          btn.textContent = expanded ? "Ver menos" : "Ver más";
+          btn.setAttribute("aria-expanded", expanded ? "true" : "false");
         });
-      },
-      { threshold: 0.12 }
-    );
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-    // Ver más / Ver menos
-    document.querySelectorAll(".timeline-item.long-exp .exp-toggle").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const item = btn.closest(".timeline-item.long-exp");
-        const expanded = item.classList.toggle("expanded");
-        btn.textContent = expanded ? "Ver menos" : "Ver más";
-        btn.setAttribute("aria-expanded", expanded ? "true" : "false");
       });
     });
   </script>
