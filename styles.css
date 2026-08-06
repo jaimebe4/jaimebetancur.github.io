@@ -629,11 +629,18 @@ h1 {
 
 /* ===== Refinamiento visual de Habilidades ===== */
 #habilidades .skills-columns {
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 1.05rem;
+  display: block;
+  columns: 2 320px;
+  column-gap: 1.05rem;
+  column-fill: balance;
 }
 
 #habilidades .skills-group.card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 1.05rem;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
   border: 1px solid rgba(121, 164, 255, 0.32);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015)),
@@ -676,6 +683,50 @@ h1 {
 
 @media (max-width: 900px) {
   #habilidades .skills-columns {
+    columns: 1;
+    column-gap: 0;
+  }
+}
+
+/* ===== Layout dedicado para Proyectos destacados ===== */
+#proyectos .projects-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  grid-template-areas:
+    "main side-1"
+    "main side-2"
+    "main side-3";
+  gap: 1rem;
+  align-items: start;
+}
+
+#proyectos .projects-layout > .card {
+  height: auto;
+}
+
+#proyectos .projects-layout > .card:nth-child(1) {
+  grid-area: main;
+}
+
+#proyectos .projects-layout > .card:nth-child(2) {
+  grid-area: side-1;
+}
+
+#proyectos .projects-layout > .card:nth-child(3) {
+  grid-area: side-2;
+}
+
+#proyectos .projects-layout > .card:nth-child(4) {
+  grid-area: side-3;
+}
+
+@media (max-width: 980px) {
+  #proyectos .projects-layout {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "side-1"
+      "side-2"
+      "side-3";
   }
 }
